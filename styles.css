@@ -69,6 +69,39 @@ body > table {
 }
 
 
+.contact-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding: 18px 12px 24px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 0.98rem;
+  color: #4a3a26;
+}
+
+.contact-name {
+  font-weight: 700;
+  color: #2d2d2d;
+}
+
+.contact-divider {
+  color: #b08a57;
+  font-weight: 600;
+}
+
+.contact-strip a {
+  color: #7a3e00;
+  text-decoration: none;
+}
+
+.contact-strip a:hover {
+  color: #5c2f00;
+  text-decoration: underline;
+}
+
+
 
 .section-heading {
   font-family: 'Merriweather', Georgia, serif;
