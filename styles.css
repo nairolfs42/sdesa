@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #f8f6f1;
+  --panel: #fffdf8;
+  --sidebar: #FFFFCC;
+  --text: #2b2b2b;
+  --muted: #5f5f5f;
+  --accent: #7a3e00;
+  --accent-dark: #5c2f00;
+  --border: #e3dccd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+td, th, p, li {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+p {
+  margin: 0 0 1.1rem 0;
+}
+
+strong {
+  font-weight: 700;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/* Main page layout */
+body > table {
+  width: min(1200px, 94%);
+  margin: 24px auto;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+
+
+.section-heading {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #5c2f00;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 3px solid #d8c7a3;
+  letter-spacing: 0.02em;
+}
+
+
+body > table > tbody > tr > td:first-child {
+  width: 140px;
+  min-width: 140px;
+  background: var(--sidebar);
+}
+
+#Table_00 {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar-bottom {
+  padding: 0;
+  vertical-align: bottom;
+  background: var(--sidebar);
+}
+
+.sidebar-bottom-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* Sidebar */
+body > table > tbody > tr > td:first-child {
+  background: var(--sidebar);
+}
+
+/* Main content cell */
+body > table > tbody > tr > td:last-child {
+  padding: 28px 36px;
+  vertical-align: top;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-family: 'Merriweather', Georgia, serif;
+  line-height: 1.3;
+  margin: 0 0 0.75rem 0;
+  color: #1d1d1d;
+}
+
+.page-title,
+p[align="center"] img + br,
+p strong:first-child {
+  margin-bottom: 1rem;
+}
+
+/* Long text blocks */
+.style1,
+.body,
+.body_bold {
+  font-family: 'Inter', Arial, sans-serif !important;
+  line-height: 1.8;
+}
+
+.body_bold {
+  font-weight: 700;
+}
+
+/* Improve readability of long biography/resume paragraphs */
+p.style1,
+p.body,
+td p {
+  max-width: 78ch;
+}
+
+/* Section spacing */
+p + table,
+table + p,
+p + p {
+  margin-top: 0.25rem;
+}
+
+a[name] {
+  scroll-margin-top: 20px;
+}
+
+/* Resume / paper tables */
+table[border="1"],
+table[width="100%"] {
+  margin: 1rem 0 1.5rem 0;
+  width: 100%;
+}
+
+table[border="1"] td,
+table[border="1"] th {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+}
+
+table[border="1"] tr:first-child {
+  background: #f2ede3;
+  font-weight: 700;
+}
+
+/* Email form page */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cfc7b8;
+  border-radius: 8px;
+  font: inherit;
+  background: #fff;
+}
+
+textarea {
+  min-height: 240px;
+  resize: vertical;
+}
+
+form table {
+  background: #f7f3ea;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Footer email link */
+div[align="center"] a {
+  display: inline-block;
+  padding: 14px 0 18px;
+  font-weight: 600;
+}
+
+/* Make older fixed-width classes more flexible */
+.unnamed1,
+.unnamed2 {
+  width: 100% !important;
+}
+
+/* Mobile improvements */
+@media (max-width: 768px) {
+  body > table,
+  body > table > tbody,
+  body > table > tbody > tr,
+  body > table > tbody > tr > td {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  body > table > tbody > tr > td:last-child {
+    padding: 20px;
+  }
+
+  #Table_00,
+  #Table_01 {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  table[width="640"],
+  table[width="599"] {
+    width: 100% !important;
+  }
+}
